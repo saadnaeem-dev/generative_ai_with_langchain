@@ -169,6 +169,11 @@ On Ubuntu or Debian linux, use apt:
 sudo apt-get install pandoc
 ```
 
+You should also ensure that your system has a compiler installed, for example like this (on Linux or WSL):
+```bash
+sudo apt install gcc g++
+```
+
 On Windows, you can use an [installer](https://github.com/jgm/pandoc/releases/latest).
 
 ### Conda
