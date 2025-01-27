@@ -159,6 +159,8 @@ If you have any problems with the environment, please raise an issue, where you 
 
 On Windows, some people have been experiencing difficulties with conda and pip (because of readline and ncurses). If that's the case for you, please have a look at [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) or use the Docker installation. Some people on Winodws reported they [needed](https://stackoverflow.com/questions/73969269/error-could-not-build-wheels-for-hnswlib-which-is-required-to-install-pyprojec/76245995#76245995) to install Visual Cpp Build Tools. In any case, if you have any problems with the environment, please raise an issue, where you show the error you got. If you feel confident that you found an improvement, please go ahead and create a pull request.
 
+### Pandoc
+
 For pip and poetry, make sure you install pandoc in your system. On MacOS use brew:
 ```bash
 brew install pandoc
@@ -169,12 +171,21 @@ On Ubuntu or Debian linux, use apt:
 sudo apt-get install pandoc
 ```
 
+On Windows, you can use an [installer](https://github.com/jgm/pandoc/releases/latest).
+
+
+### A working compiler
 You should also ensure that your system has a compiler installed, for example like this (on Linux or WSL):
 ```bash
 sudo apt install gcc g++
 ```
 
-On Windows, you can use an [installer](https://github.com/jgm/pandoc/releases/latest).
+On MacOs, a Homebrew command like this will work:
+```bash
+brew install gcc
+```
+
+On Windows, please install [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/).
 
 ### Conda
 This is the recommended method for installing dependencies. Please make sure you have [anaconda](https://www.anaconda.com/download) installed.
