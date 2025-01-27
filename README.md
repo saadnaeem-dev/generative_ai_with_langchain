@@ -200,6 +200,8 @@ The conda environment is called `langchain_ai`. You can activate it as follows:
 conda activate langchain_ai 
 ```
 
+Please note that on Windows, you have to remove the ncurses and readline dependencies (the two lines) from the `.yaml` file. I needed to install the [VS Build Tools](Microsoft C++ Build Tools": https://visualstudio.microsoft.com/visual-cpp-build-tools/) (which can take about 20 gigs of hard disk).
+
 ### Pip
 [Pip](https://pypi.org/project/pip/) is the default dependency management tool in Python. With pip, you should be able to install all the libraries from the requirements file:
 
