@@ -1,101 +1,110 @@
-"""Chat with retrieval and embeddings."""
+"""Chat with retrieval and embeddings.
 
+Start ollama like this:
+> OLLAMA_MODELS=/usr/share/ollama/.ollama/models OLLAMA_HOST=127.0.0.1:9999 ollama serve
+
+See here for more help on ollama:
+https://github.com/ollama/ollama/blob/main/docs/faq.md#where-are-models-stored
+"""
 import os
 import tempfile
 
-from config import set_environment
-from langchain.chains.base import Chain
-from langchain.chains.conversational_retrieval.base import ConversationalRetrievalChain
-from langchain.chains.flare.base import FlareChain
-from langchain.chains.moderation import OpenAIModerationChain
-from langchain.chains.sequential import SequentialChain
-from langchain.retrievers import ContextualCompressionRetriever
-from langchain.retrievers.document_compressors import EmbeddingsFilter
-from langchain_community.vectorstores.docarray import DocArrayInMemorySearch
-from langchain_core.documents import Document
-from langchain_core.retrievers import BaseRetriever
+from langchain.agents import create_react_agent, AgentExecutor
+from langchain_core.prompts import PromptTemplate
+from langchain_core.tools import tool
+from langchain_core.vectorstores import InMemoryVectorStore
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
+from langgraph.checkpoint.memory import MemorySaver
+
+from config import set_environment
+
+from langchain_ollama.chat_models import ChatOllama
+from langchain_ollama.embeddings import OllamaEmbeddings
+
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from chapter5.chat_with_retrieval.utils import LOGGER, MEMORY, load_document
+from chapter5.chat_with_retrieval.utils import LOGGER, load_document
 
 set_environment()
 
 LOGGER.info("setup LLM")
 # Setup LLM and QA chain; set temperature low to keep hallucinations in check
-LLM = ChatOpenAI(model_name="gpt-3.5-turbo", temperature=0, streaming=True)
-
-
+LLM = ChatOpenAI(model="gpt-4o-mini", temperature=0.2, streaming=True)
+# LLM = ChatOllama(
+#     base_url="172.19.48.1:9997",
+#     model="deepseek-r1:8b",
+#     temperature=0.8,
+#     num_predict=-1,
+# )
 LOGGER.info("configure_retriever")
+# Create embeddings and store in vectordb:
+# EMBEDDINGS = OllamaEmbeddings(
+#     base_url="172.19.48.1:9997",
+#     model="deepseek-r1:8b",
+# )
+EMBEDDINGS = OpenAIEmbeddings(
+    model="text-embedding-3-large",
+)
+MEMORY = MemorySaver()
+VECTOR_STORE = InMemoryVectorStore(embedding=EMBEDDINGS)
+
+template = '''Answer the following questions as best you can. You have access to the following tools:
+
+{tools}
+
+Use the following format:
+
+Question: the input question you must answer
+Thought: you should always think about what to do
+Action: the action to take, should be one of [{tool_names}]
+Action Input: the input to the action
+Observation: the result of the action
+... (this Thought/Action/Action Input/Observation can repeat N times)
+Thought: I now know the final answer
+Final Answer: the final answer to the original input question
+
+Begin!
+
+Question: {input}
+Thought:{agent_scratchpad}'''
+
+prompt = PromptTemplate.from_template(template)
 
 
-def configure_retriever(docs: list[Document], use_compression: bool = False) -> BaseRetriever:
-    """Retriever to use."""
-    # Split each document documents:
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=200)
-    splits = text_splitter.split_documents(docs)
-
-    # Create embeddings and store in vectordb:
-    embeddings = OpenAIEmbeddings()
-    # alternatively: HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
-    # Create vectordb with single call to embedding model for texts:
-    vectordb = DocArrayInMemorySearch.from_documents(splits, embeddings)
-    retriever = vectordb.as_retriever(
-        search_type="mmr",
-        search_kwargs={"k": 5, "fetch_k": 7, "include_metadata": True},
+@tool(response_format="content_and_artifact")
+def retrieve(query: str):
+    """Retrieve information related to a query."""
+    retrieved_docs = VECTOR_STORE.similarity_search(query, k=2)
+    serialized = "\n\n".join(
+        f"Source: {doc.metadata}\n" f"Content: {doc.page_content}"
+        for doc in retrieved_docs
     )
-    if not use_compression:
-        return retriever
-
-    embeddings_filter = EmbeddingsFilter(embeddings=embeddings, similarity_threshold=0.2)
-    return ContextualCompressionRetriever(
-        base_compressor=embeddings_filter,
-        base_retriever=retriever,
-    )
+    return serialized, retrieved_docs
 
 
-def configure_chain(retriever: BaseRetriever, use_flare: bool = True) -> Chain:
-    """Configure chain with a retriever.
-
-    Passing in a max_tokens_limit amount automatically
-    truncates the tokens when prompting your llm!
-    """
-    output_key = "response" if use_flare else "answer"
-    MEMORY.output_key = output_key
-    params = dict(
-        llm=LLM,
-        retriever=retriever,
-        memory=MEMORY,
-        verbose=True,
-        max_tokens_limit=4000,
-    )
-    if use_flare:
-        # different set of parameters and init
-        return FlareChain.from_llm(**params)
-    return ConversationalRetrievalChain.from_llm(**params)
+def answer_question(input_message: str):
+    return AGENT_EXECUTOR.invoke({"input": input_message})
 
 
-def configure_retrieval_chain(
-    uploaded_files,
-    use_compression: bool = False,
-    use_flare: bool = False,
-    use_moderation: bool = False,
-) -> Chain:
-    """Read documents, configure retriever, and the chain."""
+def add_uploaded_docs(uploaded_files):
     docs = []
     temp_dir = tempfile.TemporaryDirectory()
     for file in uploaded_files:
         temp_filepath = os.path.join(temp_dir.name, file.name)
         with open(temp_filepath, "wb") as f:
             f.write(file.getvalue())
-        docs.extend(load_document(temp_filepath))
+            docs.extend(load_document(temp_filepath))
 
-    retriever = configure_retriever(docs=docs, use_compression=use_compression)
-    chain = configure_chain(retriever=retriever, use_flare=use_flare)
-    if not use_moderation:
-        return chain
+    # Split each document documents:
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=1500, chunk_overlap=200)
+    splits = text_splitter.split_documents(docs)
 
-    input_variables = ["user_input"] if use_flare else ["chat_history", "question"]
-    moderation_input = "response" if use_flare else "answer"
-    moderation_chain = OpenAIModerationChain(input_key=moderation_input)
-    return SequentialChain(chains=[chain, moderation_chain], input_variables=input_variables)
+    # alternatively: HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
+    # Create vectordb with single call to embedding model for texts:
+    VECTOR_STORE.add_documents(splits)
+
+
+AGENT_EXECUTOR = AgentExecutor.from_agent_and_tools(
+    create_react_agent(llm=LLM, tools=[retrieve], prompt=prompt),
+    tools=[retrieve], handle_parsing_errors=False
+)

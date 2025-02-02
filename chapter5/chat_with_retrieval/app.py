@@ -5,9 +5,8 @@ Run like this:
 """
 
 import streamlit as st
-from streamlit.external.langchain import StreamlitCallbackHandler
 
-from chapter5.chat_with_retrieval.chat_with_documents import configure_retrieval_chain
+from chapter5.chat_with_retrieval.chat_with_documents import add_uploaded_docs, answer_question
 from chapter5.chat_with_retrieval.utils import LOGGER, MEMORY, DocumentLoader
 
 LOGGER.info("Show title")
@@ -25,22 +24,8 @@ if not uploaded_files:
     st.info("Please upload documents to continue.")
     st.stop()
 
-# use compression by default:
-use_compression = st.checkbox("compression", value=False)
-use_flare = st.checkbox("flare", value=False)
-use_moderation = st.checkbox("moderation", value=False)
-
 LOGGER.info("Configure chain")
-CONV_CHAIN = configure_retrieval_chain(
-    uploaded_files,
-    use_compression=use_compression,
-    use_flare=use_flare,
-    use_moderation=use_moderation,
-)
-
-LOGGER.info("Clear button")
-if st.sidebar.button("Clear message history"):
-    MEMORY.chat_memory.clear()
+add_uploaded_docs(uploaded_files=uploaded_files)
 
 avatars = {"human": "user", "ai": "assistant"}
 
@@ -55,19 +40,8 @@ container = st.container()
 assistant = st.chat_message("assistant")
 if user_query := st.chat_input(placeholder="Give me 3 keywords for what you have right now"):
     st.chat_message("user").write(user_query)
-    stream_handler = StreamlitCallbackHandler(container)
     with st.chat_message("assistant"):
-        if use_flare:
-            params = {"user_input": user_query}
-        else:
-            params = {
-                "question": user_query,
-                "chat_history": MEMORY.chat_memory.messages,
-            }
-        response = CONV_CHAIN.invoke(
-            {"question": user_query, "chat_history": MEMORY.chat_memory.messages},
-            callbacks=[stream_handler],
-        )
+        response = answer_question(user_query)
         # Display the response from the chatbot
         if response:
             container.markdown(response)
