@@ -10,7 +10,7 @@ body:
       value: |
         Please fill out the following information to help us resolve the issue.
 
-  - type: input
+  - type: textarea
     id: description
     attributes:
       label: Describe the bug
@@ -63,17 +63,17 @@ body:
 
   - type: input
     id: operatingSystem
-    attributed:
+    attributes:
       label: Operating System
       description: Specify your operating system
-      placeholder "[e.g. Windows 10, Ubuntu 22.10, MacOS 13.6.6]"
+      placeholder: "[e.g. Windows 10, Ubuntu 22.10, MacOS 13.6.6]"
 
   - type: input
     id: dependencyManagement
-    attributed:
+    attributes:
       label: Dependency management
       description: Specify the tool you use to manage your dependencies
-      placeholder "[e.g. Docker, Pip, Poetry, Anaconda"
+      placeholder: "[e.g. Docker, Pip, Poetry, Anaconda"
 
   - type: input
     id: pythonVersion
