@@ -3,7 +3,7 @@ huggingface-hub==0.28.1
 jupyter
 langchain-core==0.3.33
 langchain[docarray]==0.3.17
-langchain-community==1.3.16
+langchain-community==0.3.16
 langchain-openai==0.3.3
 langchain-text-splitters==0.3.5
 langgraph==0.2.69
