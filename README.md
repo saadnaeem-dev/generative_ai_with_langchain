@@ -249,9 +249,9 @@ Obviously, you'd put your API credentials here. Depending on the integration (Op
 You can find more details about API credentials and setup in chapter 3 of the book [Generative AI with LangChain](https://www.amazon.com/Generative-AI-LangChain-language-ChatGPT-ebook/dp/B0CBBL55PQ).
 
 
-## Contributing
+## 👋 Contribute
 
-If you find anything amiss with the notebooks or dependencies, please feel free to create a pull request.
+We welcome contributions from developers of all levels. If you find anything amiss with the notebooks or dependencies, please feel free to create a pull request.
 
 If you want to change the conda dependency specification (the yaml file), you can test it like this:
 ```bash
@@ -267,6 +267,14 @@ Please make sure that you keep these two ways of maintaining dependencies in syn
 
 Then make sure, you test the notebooks in the new environment to see that they run.
 
+---
+[![Star History Chart](https://api.star-history.com/svg?repos=benman1/generative_ai_with_langchain&type=Timeline)](https://star-history.com/#benman1/generative_ai_with_langchain&Date)
+
+
+## ❤️ Contributors
+
+[![repo contributors](https://contrib.rocks/image?repo=benman1/generative_ai_with_langchain)](https://github.com/benman1/generative_ai_with_langchain/graphs/contributors)
+
 ### Code validation
 I've included a `Makefile` that includes instructions for validation with flake8, mypy, and other tools. I have run mypy like this:
 ```bash
@@ -280,23 +288,9 @@ ruff check .
   </details>
     
 
-
 <details> 
-  <summary><h2>Get to know Authors</h2></summary>
+  <summary><h2>Get to know the authors</h2></summary>
 
-_Ben Auffarth_ Ben Auffarth is a full-stack data scientist with more than 15 years of work experience. With a background and Ph.D. in computational and cognitive neuroscience, he has designed and conducted wet lab experiments on cell cultures, analyzed experiments with terabytes of data, run brain models on IBM supercomputers with up to 64k cores, built production systems processing hundreds and thousands of transactions per day, and trained language models on a large corpus of text documents. He co-founded and is the former president of Data Science Speakers, London.
-
-
-
-</details>
-<details> 
-  <summary><h2>Other Related Books</h2></summary>
-<ul>
-
-  <li><a href="https://www.packtpub.com/en-us/product/transformers-for-natural-language-processing-and-computer-vision-third-edition/9781805128724">Transformers for Natural Language Processing and Computer Vision, Third Edition</a></li>
-
-  <li><a href="https://www.packtpub.com/en-us/product/building-llm-powered--applications-first-edition/9781835462317">Building LLM Powered  Applications, First Edition</a></li>
- 
-</ul>
+_Ben Auffarth_ [Ben Auffarth](https://benauffarth.com) is a full-stack data scientist with more than 15 years of work experience. With a background and Ph.D. in computational and cognitive neuroscience, he has designed and conducted wet lab experiments on cell cultures, analyzed experiments with terabytes of data, run brain models on IBM supercomputers with up to 64k cores, built production systems processing hundreds and thousands of transactions per day, and trained language models on a large corpus of text documents. He co-founded and is the former president of Data Science Speakers, London.
 
 </details>
