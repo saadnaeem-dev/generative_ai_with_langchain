@@ -251,42 +251,8 @@ You can find more details about API credentials and setup in chapter 3 of the bo
 
 ## 👋 Contribute
 
-We welcome contributions from developers of all levels. If you find anything amiss with the notebooks or dependencies, please feel free to create a pull request.
+We welcome contributions from developers of all levels. If you'd like to contribute, please check our [contributing guidelines](./CONTRIBUTING.md) and help make this repository and the book more accessible.
 
-If you want to change the conda dependency specification (the yaml file), you can test it like this:
-```bash
-conda env create --file langchain_ai.yaml --force
-```
-
-You can update the pip requirements like this:
-```bash
-pip freeze > requirements.txt
-```
-
-Please make sure that you keep these two ways of maintaining dependencies in sync.
-
-Then make sure, you test the notebooks in the new environment to see that they run.
-
----
-[![Star History Chart](https://api.star-history.com/svg?repos=benman1/generative_ai_with_langchain&type=Timeline)](https://star-history.com/#benman1/generative_ai_with_langchain&Date)
-
-
-## ❤️ Contributors
-
-[![repo contributors](https://contrib.rocks/image?repo=benman1/generative_ai_with_langchain)](https://github.com/benman1/generative_ai_with_langchain/graphs/contributors)
-
-### Code validation
-I've included a `Makefile` that includes instructions for validation with flake8, mypy, and other tools. I have run mypy like this:
-```bash
-make typecheck
-```
-
-To run the code validation in ruff, please run
-```bash
-ruff check .
-```
-  </details>
-    
 
 <details> 
   <summary><h2>Get to know the authors</h2></summary>
