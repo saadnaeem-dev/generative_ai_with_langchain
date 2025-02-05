@@ -1,6 +1,6 @@
 <h1 align="center">
-Generative AI with LangChain, First Edition</h1>
-<p align="center">This is the code repository for <a href ="https://www.packtpub.com/en-us/product/generative-ai-with-langchain-first-edition/9781835083468"> Generative AI with LangChain, First Edition</a>, published by Packt.
+Generative AI with LangChain, 2024 Edition</h1>
+<p align="center">This is the code repository for <a href ="https://amzn.to/43PuIkQ"> Generative AI with LangChain, 2024 Edition</a>, published by Packt.
 </p>
 
 <h2 align="center">
@@ -14,15 +14,13 @@ Ben Auffarth</p>
   &#8287;&#8287;&#8287;&#8287;&#8287;
   <a href="https://packt.link/free-ebook/9781835083468"><img width="32px" alt="Free PDF" title="Free PDF" src="https://cdn-icons-png.flaticon.com/512/4726/4726010.png"/></a>
  &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="https://packt.link/gbp/9781835083468"><img width="32px" alt="Graphic Bundle" title="Graphic Bundle" src="https://cdn-icons-png.flaticon.com/512/2659/2659360.png"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-   <a href="https://www.amazon.com/Generative-AI-LangChain-language-ChatGPT/dp/1835083463/"><img width="32px" alt="Amazon" title="Get your copy" src="https://cdn-icons-png.flaticon.com/512/15466/15466027.png"/></a>
+   <a href="https://amzn.to/43PuIkQ"><img width="32px" alt="Amazon" title="Get your copy" src="https://cdn-icons-png.flaticon.com/512/15466/15466027.png"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
 </p>
 <details open> 
   <summary><h2>About the book</summary>
-<a href="https://www.packtpub.com/product/unity-cookbook-fifth-edition/9781805123026">
-<img src="https://content.packt.com/B21269/cover_image_small.jpg" alt="Unity Cookbook, Fifth Edition" height="256px" align="right">
+<a href="https://amzn.to/43PuIkQ">
+<img src="https://content.packt.com/B21269/cover_image_small.jpg" alt="Generative AI with LangChain, 2024 Edition" height="256px" align="right">
 </a>
 
 ChatGPT and the GPT models by OpenAI have brought about a revolution not only in how we write and research but also in how we can process information. This book discusses the functioning, capabilities, and limitations of LLMs underlying chat systems, including ChatGPT and Bard. It also demonstrates, in a series of practical examples, how to use the LangChain framework to build production-ready and responsive LLM applications for tasks ranging from customer support to software development assistance and data analysis – illustrating the expansive utility of LLMs in real-world applications.
