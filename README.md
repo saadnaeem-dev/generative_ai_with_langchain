@@ -1,6 +1,6 @@
 <h1 align="center">
-Generative AI with LangChain, First Edition</h1>
-<p align="center">This is the code repository for <a href ="https://www.packtpub.com/en-us/product/generative-ai-with-langchain-first-edition/9781835083468"> Generative AI with LangChain, First Edition</a>, published by Packt.
+Generative AI with LangChain, 2024 Edition</h1>
+<p align="center">This is the code repository for <a href ="https://amzn.to/43PuIkQ"> Generative AI with LangChain, 2024 Edition</a>, published by Packt.
 </p>
 
 <h2 align="center">
@@ -14,18 +14,16 @@ Ben Auffarth</p>
   &#8287;&#8287;&#8287;&#8287;&#8287;
   <a href="https://packt.link/free-ebook/9781835083468"><img width="32px" alt="Free PDF" title="Free PDF" src="https://cdn-icons-png.flaticon.com/512/4726/4726010.png"/></a>
  &#8287;&#8287;&#8287;&#8287;&#8287;
-  <a href="https://packt.link/gbp/9781835083468"><img width="32px" alt="Graphic Bundle" title="Graphic Bundle" src="https://cdn-icons-png.flaticon.com/512/2659/2659360.png"/></a>
-  &#8287;&#8287;&#8287;&#8287;&#8287;
-   <a href="https://www.amazon.com/Generative-AI-LangChain-language-ChatGPT/dp/1835083463/"><img width="32px" alt="Amazon" title="Get your copy" src="https://cdn-icons-png.flaticon.com/512/15466/15466027.png"/></a>
+   <a href="https://amzn.to/43PuIkQ"><img width="32px" alt="Amazon" title="Get your copy" src="https://cdn-icons-png.flaticon.com/512/15466/15466027.png"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
 </p>
 <details open> 
   <summary><h2>About the book</summary>
-<a href="https://www.packtpub.com/product/unity-cookbook-fifth-edition/9781805123026">
-<img src="https://content.packt.com/B21269/cover_image_small.jpg" alt="Unity Cookbook, Fifth Edition" height="256px" align="right">
+<a href="https://amzn.to/43PuIkQ">
+<img src="https://content.packt.com/B21269/cover_image_small.jpg" alt="Generative AI with LangChain, 2024 Edition" height="256px" align="right">
 </a>
 
-ChatGPT and the GPT models by OpenAI have brought about a revolution not only in how we write and research but also in how we can process information. This book discusses the functioning, capabilities, and limitations of LLMs underlying chat systems, including ChatGPT and Bard. It also demonstrates, in a series of practical examples, how to use the LangChain framework to build production-ready and responsive LLM applications for tasks ranging from customer support to software development assistance and data analysis – illustrating the expansive utility of LLMs in real-world applications.
+Large Language Models (LLMs) like GPT-4o, Gemini, Claude and others have brought about a revolution not only in how we write and research but also in how we can process information. This book discusses the functioning, capabilities, and limitations of LLMs, and how to build applications with generative AI, especially LLMs. It also demonstrates, in a series of practical examples, how to use the LangChain framework to build production-ready and responsive LLM applications for tasks ranging from customer support to software development assistance and data analysis – illustrating the expansive utility of LLMs in real-world applications.
 
 Unlock the full potential of LLMs within your projects as you navigate through guidance on fine-tuning, prompt engineering, and best practices for deployment and monitoring in production environments. Whether you're building creative writing tools, developing sophisticated chatbots, or crafting cutting-edge software development aids, this book will be your roadmap to mastering the transformative power of generative AI with confidence and creativity.
 
@@ -152,133 +150,25 @@ All chapters rely on Python.
 
 Please note that Python 3.12 might not work (see [#11](/../../issues/11)).
 
-### Environment
-You can install your local environment with conda (recommended) or pip. The environment configurations for conda, pip, and poetry are provided. They all have been tested on MacOS. Please note that if you choose pip as you installation tool, you might need additional installation of system dependencies.
-
-If you have any problems with the environment, please raise an issue, where you show the error you got. If you feel confident, please go ahead and create a pull request.
-
-On Windows, some people have been experiencing difficulties with conda and pip (because of readline and ncurses). If that's the case for you, please have a look at [WSL](https://learn.microsoft.com/en-us/windows/wsl/install) or use the Docker installation. Some people on Winodws reported they [needed](https://stackoverflow.com/questions/73969269/error-could-not-build-wheels-for-hnswlib-which-is-required-to-install-pyprojec/76245995#76245995) to install Visual Cpp Build Tools. In any case, if you have any problems with the environment, please raise an issue, where you show the error you got. If you feel confident that you found an improvement, please go ahead and create a pull request.
-
-For pip and poetry, make sure you install pandoc in your system. On MacOS use brew:
-```bash
-brew install pandoc
-```
-
-On Ubuntu or Debian linux, use apt:
-```bash
-sudo apt-get install pandoc
-```
-
-On Windows, you can use an [installer](https://github.com/jgm/pandoc/releases/latest).
-
-### Conda
-This is the recommended method for installing dependencies. Please make sure you have [anaconda](https://www.anaconda.com/download) installed.
-
-First create the environment for the book that contains all the dependencies:
-```bash
-conda env create --file langchain_ai.yaml --force
-```
-
-The conda environment is called `langchain_ai`. You can activate it as follows:
-```bash
-conda activate langchain_ai 
-```
-
-### Pip
-[Pip](https://pypi.org/project/pip/) is the default dependency management tool in Python. With pip, you should be able to install all the libraries from the requirements file:
-
-```bash
-pip install -r requirements.txt
-```
-
-If you are working with a slow internet connection, you might see a timeout with pip (this can also happen with conda and pip). As a workaround, you can increase the timeout setting like this:
-```bash
-export PIP_DEFAULT_TIMEOUT=100
-```
-
-### Docker
-There's a [docker](https://www.docker.com/) file for the environment as well. It uses the docker environment and starts an ipython notebook. To use it, first build it, and then run it:
-
-```bash
-docker build -t langchain_ai .
-docker run -it -p 8888:8888 langchain_ai
-```
-
-You should be able to find the notebook in your browser at [http://localhost:8888](http://localhost:8888).
-
-### Poetry
-
-Make sure you have [poetry](https://python-poetry.org/) installed. On Linux and MacOS, you should be able to use the requirements file:
-```bash
-poetry install --no-root
-```
-This should take the `pyproject.toml` file and install all dependencies.
-
-## Setting API keys
-Following best practices regarding safety, I am not committing my credentials to GitHub. You might see `import` statements  mentioning a `config.py` file, which is not included in the repository. This module has a method `set_environment()` that sets all the keys as environment variables like this:
-
-Example config.py:
-
-```python
-import os
-
-def set_environment():
-     os.environ['OPENAI_API_KEY']='your-api-key-here'
-```
-
-Obviously, you'd put your API credentials here. Depending on the integration (Openai, Azure, etc) you need to add the corresponding API keys. The OpenAI API keys are the most often used across all the code. 
-
-You can find more details about API credentials and setup in chapter 3 of the book [Generative AI with LangChain](https://www.amazon.com/Generative-AI-LangChain-language-ChatGPT-ebook/dp/B0CBBL55PQ).
+Please check the instructions for setting up the environment either in the book or [here](./SETUP.md). They include instructions for dependencies and API keys. **Following the instructions should make sure that you don't have any issues running the code in the book or this repository. If you encounter any issues, please make sure you've followed these instructions.**
 
 
-## Contributing
+## 👋 Contribute
 
-If you find anything amiss with the notebooks or dependencies, please feel free to create a pull request.
+We welcome contributions from developers of all levels. If you'd like to contribute, please check our [contributing guidelines](./CONTRIBUTING.md) and help make this repository and the book more accessible.
 
-If you want to change the conda dependency specification (the yaml file), you can test it like this:
-```bash
-conda env create --file langchain_ai.yaml --force
-```
+---
+[![Star History Chart](https://api.star-history.com/svg?repos=benman1/generative_ai_with_langchain&type=Timeline)](https://star-history.com/#benman1/generative_ai_with_langchain&Date)
 
-You can update the pip requirements like this:
-```bash
-pip freeze > requirements.txt
-```
 
-Please make sure that you keep these two ways of maintaining dependencies in sync.
+## ❤️ Contributors
 
-Then make sure, you test the notebooks in the new environment to see that they run.
-
-### Code validation
-I've included a `Makefile` that includes instructions for validation with flake8, mypy, and other tools. I have run mypy like this:
-```bash
-make typecheck
-```
-
-To run the code validation in ruff, please run
-```bash
-ruff check .
-```
-  </details>
-    
+[![repo contributors](https://contrib.rocks/image?repo=benman1/generative_ai_with_langchain)](https://github.com/benman1/generative_ai_with_langchain/graphs/contributors)
 
 
 <details> 
-  <summary><h2>Get to know Authors</h2></summary>
+  <summary><h2>Get to know the authors</h2></summary>
 
-_Ben Auffarth_ Ben Auffarth is a full-stack data scientist with more than 15 years of work experience. With a background and Ph.D. in computational and cognitive neuroscience, he has designed and conducted wet lab experiments on cell cultures, analyzed experiments with terabytes of data, run brain models on IBM supercomputers with up to 64k cores, built production systems processing hundreds and thousands of transactions per day, and trained language models on a large corpus of text documents. He co-founded and is the former president of Data Science Speakers, London.
-
-
-
-</details>
-<details> 
-  <summary><h2>Other Related Books</h2></summary>
-<ul>
-
-  <li><a href="https://www.packtpub.com/en-us/product/transformers-for-natural-language-processing-and-computer-vision-third-edition/9781805128724">Transformers for Natural Language Processing and Computer Vision, Third Edition</a></li>
-
-  <li><a href="https://www.packtpub.com/en-us/product/building-llm-powered--applications-first-edition/9781835462317">Building LLM Powered  Applications, First Edition</a></li>
- 
-</ul>
+_Ben Auffarth_ [Ben Auffarth](https://benauffarth.com) is a full-stack data scientist with more than 15 years of work experience. With a background and Ph.D. in computational and cognitive neuroscience, he has designed and conducted wet lab experiments on cell cultures, analyzed experiments with terabytes of data, run brain models on IBM supercomputers with up to 64k cores, built production systems processing hundreds and thousands of transactions per day, and trained language models on a large corpus of text documents. He co-founded and is the former president of Data Science Speakers, London.
 
 </details>
