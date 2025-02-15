@@ -1,38 +1,22 @@
-"""Utility functions and constants.
-
-I am having some problems caching the memory and the retrieval. When
-I decorate for caching, I get streamlit init errors.
-"""
+"""Utility functions for document loading."""
 
 import logging
+import os
 import pathlib
+import tempfile
 from typing import Any
 
-from langchain.memory import ConversationBufferMemory
 from langchain_community.document_loaders.epub import UnstructuredEPubLoader
 from langchain_community.document_loaders.pdf import PyPDFLoader
 from langchain_community.document_loaders.text import TextLoader
-from langchain_community.document_loaders.word_document import UnstructuredWordDocumentLoader
+from langchain_community.document_loaders.word_document import (
+    UnstructuredWordDocumentLoader
+)
 from langchain_core.documents import Document
 from streamlit.logger import get_logger
 
 logging.basicConfig(encoding="utf-8", level=logging.INFO)
 LOGGER = get_logger(__name__)
-
-
-def init_memory():
-    """Initialize the memory for contextual conversation.
-
-    We are caching this, so it won't be deleted
-     every time, we restart the server.
-    """
-    return ConversationBufferMemory(
-        memory_key="chat_history", return_messages=True, output_key="answer"
-    )
-
-
-LOGGER.info("init memory")
-MEMORY = init_memory()
 
 
 class EpubReader(UnstructuredEPubLoader):
