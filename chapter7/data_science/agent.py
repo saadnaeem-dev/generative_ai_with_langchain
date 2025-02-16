@@ -4,12 +4,11 @@ from config import set_environment
 from langchain.agents import AgentExecutor
 from langchain_core.prompts import PromptTemplate
 from langchain_experimental.agents.agent_toolkits import create_pandas_dataframe_agent
-from langchain_openai import OpenAI
+from langchain_openai import ChatOpenAI
 
 from data_science.prompts import PROMPT
 
 set_environment()
-
 
 def create_agent(csv_file: str) -> AgentExecutor:
     """
@@ -21,12 +20,13 @@ def create_agent(csv_file: str) -> AgentExecutor:
     Returns:
         An agent executor.
     """
-    llm = OpenAI()
+    llm = ChatOpenAI()
     df = pd.read_csv(csv_file)
-    return create_pandas_dataframe_agent(llm, df, verbose=True)
-
+    agent = create_pandas_dataframe_agent(llm, df, verbose=True)
+    return agent
 
 def query_agent(agent: AgentExecutor, query: str) -> str:
     """Query an agent and return the response."""
     prompt = PromptTemplate(template=PROMPT, input_variables=["query"])
-    return agent.run(prompt.format(query=query))
+    formatted_prompt = prompt.format(query=query)
+    return agent.run(formatted_prompt)
