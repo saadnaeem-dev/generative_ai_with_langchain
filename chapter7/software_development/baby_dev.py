@@ -10,9 +10,9 @@ from langchain_experimental.plan_and_execute import (
     load_agent_executor,
     load_chat_planner,
 )
-from langchain_openai import OpenAI
+from langchain_openai import ChatOpenAI
 
-from chapter6.software_development.python_developer import DEV_PROMPT, PythonDeveloper, PythonExecutorInput
+from chapter7.software_development.python_developer import DEV_PROMPT, PythonDeveloper, PythonExecutorInput
 
 set_environment()
 
@@ -23,11 +23,11 @@ todo_prompt = PromptTemplate.from_template(
     "The output should be a list of the format {function name}: {requirements of the function}"
     "Come up with a list of needed functions for this objective: {objective}"
 )
-todo_llm = LLMChain(llm=OpenAI(temperature=0), prompt=todo_prompt)
+llm = ChatOpenAI(temperature=0, max_tokens=4000)
+todo_llm = todo_prompt | llm
 # # , model_name="ada"
 software_prompt = PromptTemplate.from_template(DEV_PROMPT)
 # careful: if you have the wrong model spec, you might not get any code!
-llm = OpenAI(temperature=0, max_tokens=4000)
 software_llm = software_prompt | llm
 software_dev = PythonDeveloper(llm_chain=software_llm)
 

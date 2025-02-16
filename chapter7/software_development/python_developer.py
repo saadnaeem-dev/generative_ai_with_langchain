@@ -6,7 +6,7 @@ import uuid
 from contextlib import contextmanager, redirect_stdout
 from logging import FileHandler
 from pathlib import Path
-from typing import Literal, Union
+from typing import Literal
 
 import pip
 from langchain_community.llms.fake import FakeListLLM
