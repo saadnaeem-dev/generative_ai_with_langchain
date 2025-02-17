@@ -15,3 +15,4 @@ streamlit==1.37.1
 langchain-ollama==0.2.3
 langchain_groq==0.2.4
 langchain-experimental==0.3.4
+langchain_chroma==0.2.2
