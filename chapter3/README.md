@@ -20,11 +20,11 @@ set_environment()
 
 | Section	| File | Colab	 | Kaggle	| Gradient |
 |-----------|--------|--------|-----------|----------|
-| LLMs, prompts, and chat models |  [notebook](LLMs_chat_models_and_prompts.ipynb)   |        | | |
-| Running local models |  [notebook](Running_local_models.ipynb)   |        | | |
-| Customer service helper | [notebook](customer_service_use_case.ipynb)  |        | | |
-| Using HuggingFace Hub models | [notebook](hf_hub_models.ipynb)     |        | | |
-| Map-reduce for summarization | [notebook](map-reduce.ipynb)   |        | | |
+| Intro to LangGraph |  [notebook](langgraph_intro.ipynb)   |        | | |
+| Output parsers |  [notebook](output_parsers.ipynb.ipynb)   |        | | |
+| Error handling | [notebook](error_handling.ipynb)  |        | | |
+| Prompt templates | [notebook](prompt-templates.ipynb)     |        | | |
+| Multimodaliry | [notebook](multimodality.ipynb)   |        | | |
 | Tracking costs |  [notebook](tracking_costs.ipynb)  |        | | |
 
 
