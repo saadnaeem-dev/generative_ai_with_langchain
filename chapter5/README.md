@@ -3,7 +3,7 @@
 
 | Section	| File | Colab	 | Kaggle	| Gradient |
 |-----------|--------|--------|-----------|----------|
-| Tool callinb basics | [notebook](tools_with_llm_example.ipynb)  |        | | |
+| Tool calling basics | [notebook](tools_with_llm_example.ipynb)  |        | | |
 | Tools on LangChain | [notebook](tools_langchain.ipynb)  |        | | |
 | Custom tools | [notebook](custom_tools.ipynb)     |        | | |
 | Built-in tools | [notebook](built-in_tools.ipynb)     |        |   |   |
