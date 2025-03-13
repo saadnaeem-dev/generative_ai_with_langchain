@@ -4,7 +4,7 @@
 | Section	| File | Colab	 | Kaggle	| Gradient |
 |-----------|--------|--------|-----------|----------|
 | Tool calling basics | [notebook](tools_with_llm_example.ipynb)  |        | | |
-| Tools on LangChain | [notebook](tools_langchain.ipynb)  |        | | |
+| Tools in LangChain | [notebook](tools_langchain.ipynb)  |        | | |
 | Custom tools | [notebook](custom_tools.ipynb)     |        | | |
 | Built-in tools | [notebook](built-in_tools.ipynb)     |        |   |   |
 | ReACT | [notebook](react_example.ipynb)     |       |   |   |
