@@ -25,6 +25,5 @@ set_environment()
 | Error handling | [notebook](error_handling.ipynb)  |        | | |
 | Prompt templates | [notebook](prompt-templates.ipynb)     |        | | |
 | Multimodaliry | [notebook](multimodality.ipynb)   |        | | |
-| Tracking costs |  [notebook](tracking_costs.ipynb)  |        | | |
-
-
+| Map-reduce approach to handle long inputs |  [notebook](map_reduce.ipynb)  |        | | |
+| Memory |  [notebook](memory.ipynb)  |        | | |
