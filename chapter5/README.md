@@ -3,12 +3,11 @@
 
 | Section	| File | Colab	 | Kaggle	| Gradient |
 |-----------|--------|--------|-----------|----------|
-| Embeddings | [notebook](embeddings.ipynb)  |        | | |
-| Memory | [notebook](memory.ipynb)     |        | | |
-| Moderation | [notebook](moderation.ipynb)     |        |   |   |
-| Retrievers | [notebook](retrievers.ipynb)     |       |   |   |
-| Summarization | [notebook](pdf_summary.ipynb)     |       |   |   |
-| Summarization of pdfs |  [directory](summarize)   |   x     | x | x |
-| Chat with retrieval project |  [directory](chat_with_retrieval)   |  x      | x | x |
-| Map reduce with RAG | [python script](rag_map_reduce.py)     |       |   |   |
-
+| Tool callinb basics | [notebook](tools_with_llm_example.ipynb)  |        | | |
+| Tools on LangChain | [notebook](tools_langchain.ipynb)  |        | | |
+| Custom tools | [notebook](custom_tools.ipynb)     |        | | |
+| Built-in tools | [notebook](built-in_tools.ipynb)     |        |   |   |
+| ReACT | [notebook](react_example.ipynb)     |       |   |   |
+| Advanced tool calling capabilities | [notebook](tool_node.ipynb)     |       |   |   |
+| Structured outputs and controlled generation  | [notebook](structured_output.ipynb)     |       |   |   |
+| Plan-and-solve agent  | [notebook](plan_and_solve.ipynb)     |       |   |   |
