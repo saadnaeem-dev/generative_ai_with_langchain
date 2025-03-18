@@ -28,9 +28,11 @@ search_engine/faiss_index.db/
 .ipynb_checkpoints
 
 
-# Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / DLL files / Cache
 __pycache__/
 **/*.pyc
+.gradio/
+cache/
 
 # Logs
 logs/
