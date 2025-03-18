@@ -1,11 +1,13 @@
 # Chapter 6 - Developing Software with Generative AI
 
+This is the directory for the code accompanying chapter 8 on Evaluation and Testing.
+Please make sure you set up your environment with pip, conda, poetry, or docker! You can set up the keys for the different providers in a `config.py` as recommended in the book. Please check the [setup instructions](../SETUP.md) for dependencies and API keys before you start.
+
 
 | Section	| File | Colab	 | Kaggle	| Gradient |
 |-----------|--------|--------|-----------|----------|
-| Examples with code models | [notebook](code_models.ipynb)  |        | | |
-| More examples with code models | [notebook](software_development.ipynb)     |      |   |   |
-| Code understanding | [notebook](code_understanding.ipynb)  |        | | |
-| Build a RAG on a documentation website | [notebook](langchain_rag.ipynb)  |        | | |
+| Examples with code models | [notebook](code_models.ipynb)  | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/benman1/generative_ai_with_langchain/blob/second_edition/code_models.ipynb) | [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/notebooks/create?source=https://github.com/benman1/generative_ai_with_langchain/blob/second_edition/code_models.ipynb) | [![Gradient](https://img.shields.io/badge/Gradient-Open-blue)](https://gradient.run/notebooks/new?template=https://github.com/benman1/generative_ai_with_langchain/blob/second_edition/code_models.ipynb) |
+| More examples with code models | [notebook](software_development.ipynb)     | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/benman1/generative_ai_with_langchain/blob/second_edition/software_development.ipynb) | [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/notebooks/create?source=https://github.com/benman1/generative_ai_with_langchain/blob/second_edition/software_development.ipynb) | [![Gradient](https://img.shields.io/badge/Gradient-Open-blue)](https://gradient.run/notebooks/new?template=https://github.com/benman1/generative_ai_with_langchain/blob/second_edition/software_development.ipynb) |
+| Code understanding | [notebook](code_understanding.ipynb)  | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/benman1/generative_ai_with_langchain/blob/second_edition/code_understanding.ipynb) | [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/notebooks/create?source=https://github.com/benman1/generative_ai_with_langchain/blob/second_edition/code_understanding.ipynb) | [![Gradient](https://img.shields.io/badge/Gradient-Open-blue)](https://gradient.run/notebooks/new?template=https://github.com/benman1/generative_ai_with_langchain/blob/second_edition/code_understanding.ipynb) |
+| Build a RAG on a documentation website | [notebook](langchain_rag.ipynb)  | [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/benman1/generative_ai_with_langchain/blob/second_edition/langchain_rag.ipynb) | [![Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://kaggle.com/notebooks/create?source=https://github.com/benman1/generative_ai_with_langchain/blob/second_edition/langchain_rag.ipynb) | [![Gradient](https://img.shields.io/badge/Gradient-Open-blue)](https://gradient.run/notebooks/new?template=https://github.com/benman1/generative_ai_with_langchain/blob/second_edition/langchain_rag.ipynb) |
 | Software development project |  [directory](software_development)   |  x      | x | x |
-
