@@ -1,17 +1,22 @@
 """Prompt tracking with PromptWatch.io."""
-from config import set_environment
 from langchain_core.prompts import PromptTemplate
-from langchain_openai import OpenAI
+from langchain_openai import ChatOpenAI
+from langchain_core.output_parsers import StrOutputParser
 from promptwatch import PromptWatch
+
+from config import set_environment
 
 set_environment()
 
-prompt_template = PromptTemplate.from_template("Finish this sentence: {input}")
-llm = OpenAI()
-my_chain = prompt_template | llm
+# Setup the chain using the modern Runnables API
+prompt_template = PromptTemplate.from_template("Finish this sentence {input}")
+model = ChatOpenAI()
+chain = prompt_template | model | StrOutputParser()
 
+# Track prompt execution with PromptWatch
 with PromptWatch() as pw:
-    my_chain.invoke({"input": "The quick brown fox jumped over"})
+    result = chain.invoke({"input": "The quick brown fox jumped over"})
+    print(f"Result: {result}")
 
-if __name__ == "__main__":
-    pass
+print("Check PromptWatch.io dashboard for detailed trace information")
+
