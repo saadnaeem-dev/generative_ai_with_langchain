@@ -1,4 +1,4 @@
-# Chapter 6 - Developing Software with Generative AI
+# Chapter 6 - Advanced Applications and Multi-Agent Systems
 
 
 | Section	| File | Colab	 | Kaggle	| Gradient |
@@ -9,3 +9,4 @@
 | Tree-of-thoughts (ToT) agent | [notebook](tot.ipynb)  |        | | |
 | Cache on LangGraph |  [notebook](cache.ipynb)   |        | | |
 
+Please make sure you set up your environment with pip, conda, poetry, or docker! You can set up the keys for the different providers in a `config.py` as recommended in the book. Please check the [setup instructions](../SETUP.md) for dependencies and API keys before you start.
