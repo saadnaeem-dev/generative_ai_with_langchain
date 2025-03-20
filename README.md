@@ -1,55 +1,45 @@
 <h1 align="center">
 Generative AI with LangChain, 2nd Edition (2025)</h1>
-<p align="center">This is the code repository for <a href ="https://amzn.to/43PuIkQ"> Generative AI with LangChain, 2nd Edition (2025)</a>, published by Packt.
+<p align="center">This is the code repository for <a href ="https://amzn.to/4iiM5RG"> Generative AI with LangChain, 2nd Edition (2025)</a>, published by Packt.
 </p>
 
 <h2 align="center">
-Build large language model (LLM) apps with Python, ChatGPT, and other LLMs 
+Build production ready LLM applications and advanced agents using Python and LangGraph 
 </h2>
 <p align="center">
-Ben Auffarth</p>
+Ben Auffarth, Leonid Kuligin</p>
 
 <p align="center">
    <a href="https://packt.link/lang" alt="Discord" title="Learn more on the Discord server"><img width="32px" src="https://cliply.co/wp-content/uploads/2021/08/372108630_DISCORD_LOGO_400.gif"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
   <a href="https://packt.link/free-ebook/9781835083468"><img width="32px" alt="Free PDF" title="Free PDF" src="https://cdn-icons-png.flaticon.com/512/4726/4726010.png"/></a>
  &#8287;&#8287;&#8287;&#8287;&#8287;
-   <a href="https://amzn.to/43PuIkQ"><img width="32px" alt="Amazon" title="Get your copy" src="https://cdn-icons-png.flaticon.com/512/15466/15466027.png"/></a>
+   <a href="https://amzn.to/4iiM5RG"><img width="32px" alt="Amazon" title="Get your copy" src="https://cdn-icons-png.flaticon.com/512/15466/15466027.png"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
 </p>
 <details open> 
   <summary><h2>About the book</summary>
-<a href="https://amzn.to/43PuIkQ">
+<a href="https://amzn.to/4iiM5RG">
 <img src="https://content.packt.com/B21269/cover_image_small.jpg" alt="Generative AI with LangChain, 2nd Edition (2025)" height="256px" align="right">
 </a>
 
-Large Language Models (LLMs) like GPT-4o, Gemini, Claude and others have brought about a revolution not only in how we write and research but also in how we can process information. This book discusses the functioning, capabilities, and limitations of LLMs, and how to build applications with generative AI, especially LLMs. It also demonstrates, in a series of practical examples, how to use the LangChain framework to build production-ready and responsive LLM applications for tasks ranging from customer support to software development assistance and data analysis – illustrating the expansive utility of LLMs in real-world applications.
+This revised edition builds a foundation in agentic AI, LLM fundamentals, LangChain, & LangGraph for developers at all levels. Fully updated to cover the latest in LangChain and production LLM applications, it captures the evolving ecosystem and enterprise deployment landscape. New coverage includes multi-agent architectures, LangGraph interfaces, robust RAG techniques with hybrid search, re-rankers, and advanced fact-checking mechanisms, plus enterprise-grade testing frameworks. It provides coverage of key design patterns behind agentic systems, practical implementations of multi-agent systems for complex tasks. Explore cutting-edge agent strategies such as Tree of Thought, multi-agent orchestration, detailed error handling, and structured output generation. Coverage dedicated to evaluation, testing, and production deployment reflect the maturing LLM application landscape. Design secure, compliant AI systems with built-in production safeguards, responsible development practices, and a perspective on future research directions.The enhanced RAG coverage features techniques like hybrid search, re-rankers, and fact-checking mechanisms.
 
-Unlock the full potential of LLMs within your projects as you navigate through guidance on fine-tuning, prompt engineering, and best practices for deployment and monitoring in production environments. Whether you're building creative writing tools, developing sophisticated chatbots, or crafting cutting-edge software development aids, this book will be your roadmap to mastering the transformative power of generative AI with confidence and creativity.
+Whether upgrading existing LLM applications or building new enterprise-scale solutions, by the end of the book, you will have updated knowledge on the practical patterns needed for production success
 
 </details>
 <details open> 
   <summary><h2>Key Learnings</summary>
+
 <ul>
-
-<li>Understand LLMs, their strengths and limitations</li>
-
-<li>Grasp generative AI fundamentals and industry trends</li>
-
-<li>Create LLM apps with LangChain like question-answering systems and chatbots</li>
-
-<li>Understand transformer models and attention mechanisms</li>
-
-<li>Automate data analysis and visualization using pandas and Python</li>
-
-<li>Grasp prompt engineering to improve performance</li>
-
-<li>Fine-tune LLMs and get to know the tools to unleash their power</li>
-
-<li>Deploy LLMs as a service with LangChain and apply evaluation strategies</li>
-
-<li>Privately interact with documents using open-source LLMs to prevent data leaks</li>
-
+<li>Design and implement refined multi-agent systems using LangGraph</li>
+<li>Enterprise-grade testing and evaluation frameworks for LLM applications</li>
+<li>Deploy production-ready observability and monitoring solutions</li>
+<li>Build RAG systems with hybrid search and re-ranking capabilities</li>
+<li>Implement agents for software development and data analysis</li>
+<li>Work with latest LLMs and providers Google Gemini, Anthropic and Mistral, DeepSeek, and OpenAI o3-mini</li>
+<li>Optimize cost and performance across different deployment types</li>
+<li>Design secure, compliant AI systems with current best practices</li>
 </ul>
 
   </details>
@@ -58,9 +48,10 @@ Unlock the full potential of LLMs within your projects as you navigate through g
 
 Thank you for choosing "Generative AI with LangChain"! We appreciate your enthusiasm and feedback.
 
-Please note that we've released an updated version of the book. Consequently, there are two different branches for this repository: 
-* [main](https://github.com/benman1/generative_ai_with_langchain/tree/main) - this is the original version of the book.
-* [softupdate](https://github.com/benman1/generative_ai_with_langchain/tree/softupdate) - this is for the latest update of the book, corresponding to ver 0.1.13 of LangChain.
+Please note that we've released an updated version of the book. Consequently, there are three different branches for this repository: 
+* [2nd edition](https://github.com/benman1/generative_ai_with_langchain/tree/second_edition) - this is for the latest update of the book, corresponding to ver 0.3 of LangChain.
+* * [softupdate](https://github.com/benman1/generative_ai_with_langchain/tree/softupdate) - this is for the soft update of the book (2024), corresponding to ver 0.1.13 of LangChain.
+* [main](https://github.com/benman1/generative_ai_with_langchain/tree/main) - this is the original version of the book (December 2023).
 
 Please refer to the version that you are interested in or that corresponds to your version of the book.
 </details>
@@ -72,7 +63,7 @@ Download a free PDF <img alt="Coding" height="25" width="40" src="https://emerge
 _If you have already purchased an up-to-date print or Kindle version of this book, you can get a DRM-free PDF version at no cost. Simply click on the link to claim your free PDF._
 [Free-Ebook](https://packt.link/free-ebook/9781835083468) <img alt="Coding" height="15" width="35"  src="https://media.tenor.com/ex_HDD_k5P8AAAAi/habbo-habbohotel.gif">
 
-We also provide a PDF file that has color images of the screenshots/diagrams used in this book at [GraphicBundle](https://packt.link/gbp/9781835083468) <img alt="Coding" height="15" width="35"  src="https://media.tenor.com/ex_HDD_k5P8AAAAi/habbo-habbohotel.gif">
+We  provide a PDF file that has color images of the screenshots/diagrams used in this book at [GraphicBundle](https://packt.link/gbp/9781835083468) <img alt="Coding" height="15" width="35"  src="https://media.tenor.com/ex_HDD_k5P8AAAAi/habbo-habbohotel.gif">
 </details>
 
 <details open>
@@ -117,15 +108,9 @@ In the following table, you can find links to the directories in this repository
   <summary><h2>Requirements for this book</summary>
   
 ### Software and hardware list
-This is the companion repository for the book. Here are a few instructions that help getting set up. Please also see chapter 3. 
+This is the companion repository for the book. Here are a few instructions that help getting set up. Please also see chapter 2. 
 
 All chapters rely on Python. 
-
-| Chapter | Software required    | Link to the software    | Hardware specifications    | OS required    |
-|:---:  |:---:  |:---:  |:---:  |:---:  |
-| All chapters  | Python 3.11  | [https://www.python.org/downloads/](https://www.python.org/downloads/) | Should work on any recent computer | Windows, MacOS, Linux (any), macOS, Windows |
-
-Please note that Python 3.12 might not work (see [#11](/../../issues/11)).
 
 Please check the instructions for setting up the environment either in the book or [here](./SETUP.md). They include instructions for dependencies and API keys. **Following the instructions should make sure that you don't have any issues running the code in the book or this repository. If you encounter any issues, please make sure you've followed these instructions.**
 
@@ -146,6 +131,6 @@ We welcome contributions from developers of all levels. If you'd like to contrib
 <details> 
   <summary><h2>Get to know the authors</h2></summary>
 
-_Ben Auffarth_ [Ben Auffarth](https://benauffarth.com) is a full-stack data scientist with more than 15 years of work experience. With a background and Ph.D. in computational and cognitive neuroscience, he has designed and conducted wet lab experiments on cell cultures, analyzed experiments with terabytes of data, run brain models on IBM supercomputers with up to 64k cores, built production systems processing hundreds and thousands of transactions per day, and trained language models on a large corpus of text documents. He co-founded and is the former president of Data Science Speakers, London.
+_Ben Auffarth_ Ben Auffarth, PhD is a bestselling author and AI implementation expert with over 15 years of experience bridging advanced technology with measurable business outcomes. As founder of [Chelsea AI Ventures](https://www.chelseaai.co.uk/), he specializes in helping small and medium enterprises implement enterprise-grade AI solutions that deliver tangible ROI. His systems have prevented millions in fraud losses and process transactions at sub-300ms latency. With a background in computational neuroscience, Ben brings rare depth to practical AI applications—from supercomputing brain models to production systems that combine technical excellence with business strategy. His books are practical "cookbooks" that explain complex AI concepts in accessible, hands-on ways, while his consulting work focuses on delivering concrete, measurable outcomes for businesses. Based in London, Ben balances his technical expertise with family time and participation in the Data Science Speakers community.
 
 </details>
