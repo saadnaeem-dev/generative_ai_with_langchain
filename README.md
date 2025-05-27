@@ -10,7 +10,7 @@ Build production ready LLM applications and advanced agents using Python and Lan
 Ben Auffarth, Leonid Kuligin</p>
 
 <p align="center">
-   <a href="https://packt.link/lang" alt="Discord" title="Learn more on the Discord server"><img width="32px" src="https://cliply.co/wp-content/uploads/2021/08/372108630_DISCORD_LOGO_400.gif"/></a>
+   <a href="https://discord.gg/YQbX5rsc74" alt="Discord" title="Learn more on the Discord server"><img width="32px" src="https://cliply.co/wp-content/uploads/2021/08/372108630_DISCORD_LOGO_400.gif"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
   <a href="https://packt.link/free-ebook/9781837022014"><img width="32px" alt="Free PDF" title="Free PDF" src="https://cdn-icons-png.flaticon.com/512/4726/4726010.png"/></a>
  &#8287;&#8287;&#8287;&#8287;&#8287;
@@ -81,7 +81,7 @@ Thank you for your understanding and happy coding!
 <details open> 
    <summary><h3>Know more on the Discord server <img alt="Coding" height="25" width="32"  src="https://cliply.co/wp-content/uploads/2021/08/372108630_DISCORD_LOGO_400.gif"></summary>
 
-You can engage with the author and other readers on the discord server and find latest updates and discussions in the community at [Discord](https://packt.link/lang)
+You can engage with the author and other readers on the discord server and find latest updates and discussions in the community at [Discord](https://discord.gg/YQbX5rsc74)
 </details>
 
 <details open> 
