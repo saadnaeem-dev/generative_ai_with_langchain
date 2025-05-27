@@ -1,4 +1,4 @@
-# Chapter 1 - From Language Models to Agents Agents
+# Chapter 1 - From Language Models to Agents
 
 This is the directory for the code accompanying chapter 1.
 
