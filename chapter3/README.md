@@ -1,4 +1,4 @@
-# Chapter 3 - Getting Started with LangChain
+# Chapter 3 - Building Workflows with LangGraph
 
 Please make sure, you set up your environment with pip, conda, poetry, or docker!
 
