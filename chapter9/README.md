@@ -1,4 +1,4 @@
-# Chapter 9 - Deployment and Observability
+# Chapter 9 - Production Deployment and Observability
 
 This directory contains code examples for deploying and monitoring LLM applications in production environments.
 
