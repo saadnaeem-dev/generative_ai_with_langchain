@@ -49,8 +49,8 @@ Whether you're extending existing workflows or architecting multi-agent systems 
 
 Thank you for choosing "Generative AI with LangChain"! We appreciate your enthusiasm and feedback.
 
-Please note that we've released an updated version of the book. Consequently, there are three different branches for this repository: 
-* [2nd edition](https://github.com/benman1/generative_ai_with_langchain/tree/second_edition) - this is for the latest update of the book, corresponding to ver 0.3 of LangChain.
+Please note that we've released several updated versions of the book. Consequently, there are three different branches for this repository: 
+* [2nd edition](https://github.com/benman1/generative_ai_with_langchain/tree/second_edition) - this is for the 2nd edition of the book, corresponding to ver 0.3 of LangChain.
 * [softupdate](https://github.com/benman1/generative_ai_with_langchain/tree/softupdate) - this is for the soft update of the book (2024), corresponding to ver 0.1.13 of LangChain.
 * [main](https://github.com/benman1/generative_ai_with_langchain/tree/main) - this is the original version of the book (December 2023).
 
