@@ -16,7 +16,7 @@ Ben Auffarth, Leonid Kuligin</p>
  &#8287;&#8287;&#8287;&#8287;&#8287;
   <a href="https://packt.link/gbp/9781837022014"><img width="32px" alt="Graphic Bundle" title="Graphic Bundle" src="https://cdn-icons-png.flaticon.com/512/2659/2659360.png"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
-   <a href="https://www.amazon.com/Generative-LangChain-production-applications-LangGraph/dp/1837022011?crid=2N34Y9RXQO0QW&dib=eyJ2IjoiMSJ9.0-CDMHg2RpgkpcHaHyI26Qfotp57ZVi66vEKdrV7zu_6YkwGlkKDoCQwxeQgKobxIngV5bBE16nxmipfQ69fz3BN-_bs1_2Uw9JnVaQWjFXSb0e8axAwYTltAWFurwOwlqCFkN1MA3Lhdn3wisKPEaV_i_j5RjByQjPQSK0IdQ0GmCKsxDRdybB3lupMmFMFKM20Vrga2gpKeX9_dv_0hi4fPkL--LUvjPJnqsKf9Ek.gibe_sWs1V7hFlK-03QfCaGplCohkzX7FsuwF0d7-dw&dib_tag=se&keywords=Generative+AI+with+LangChain&qid=1742463503&s=books&sprefix=generative+ai+with+langchain,stripbooks,72&sr=1-4&linkCode=sl1&tag=benman10e-20&linkId=994c9acda6f828a8f7e8e7b258d3e17f&language=en_US&ref_=as_li_ss_tl"><img width="32px" alt="Amazon" title="Get your copy" src="https://cdn-icons-png.flaticon.com/512/15466/15466027.png"/></a>
+   <a href="https://amzn.to/4muAqBT"><img width="32px" alt="Amazon" title="Get your copy" src="https://cdn-icons-png.flaticon.com/512/15466/15466027.png"/></a>
   &#8287;&#8287;&#8287;&#8287;&#8287;
 </p>
 <details open> 
@@ -62,7 +62,7 @@ Please refer to the version that you are interested in or that corresponds to yo
 Download a free PDF <img alt="Coding" height="25" width="40" src="https://emergency.com.au/wp-content/uploads/2021/03/free.gif">
 
 _If you have already purchased an up-to-date print or Kindle version of this book, you can get a DRM-free PDF version at no cost. Simply click on the link to claim your free PDF._
-[Free-Ebook](https://packt.link/free-ebook/9781835083468) <img alt="Coding" height="15" width="35"  src="https://media.tenor.com/ex_HDD_k5P8AAAAi/habbo-habbohotel.gif">
+[Free-Ebook](https://packt.link/free-ebook/9781837022014) <img alt="Coding" height="15" width="35"  src="https://media.tenor.com/ex_HDD_k5P8AAAAi/habbo-habbohotel.gif">
 
 We  provide a PDF file that has color images of the screenshots/diagrams used in this book at [GraphicBundle](https://packt.link/gbp/9781837022014) <img alt="Coding" height="15" width="35"  src="https://media.tenor.com/ex_HDD_k5P8AAAAi/habbo-habbohotel.gif">
 </details>
@@ -101,7 +101,6 @@ In the following table, you can find links to the directories in this repository
 | Chapter 8 | Evaluation and Testing of LLM Applications | [chapter8/](./chapter8) |
 | Chapter 9 | Production Deployment and Observability | [chapter9/](./chapter9) |
 
-
 </details>
 
 
@@ -137,16 +136,5 @@ _Ben Auffarth_ Ben Auffarth is a full-stack data scientist with more than 15 yea
 _Leonid Kuligin_ Leonid Kuligin is a staff AI engineer at Google Cloud, working on generative AI and classical machine learning solutions (such as demand forecasting or optimization problems). Leonid is one of the key maintainers of Google Cloud integrations on LangChain, and a visiting lecturer at CDTM (TUM and LMU). Prior to Google, Leonid gained more than 20 years of experience in building B2C and B2B applications based on complex machine learning and data processing solutions such as search, maps, and investment management in German, Russian, and US technological, financial, and retail companies.
 
 
-
-</details>
-<details> 
-  <summary><h2>Other Related Books</h2></summary>
-<ul>
-
-  <li><a href="https://www.packtpub.com/en-us/product/building-ai-agents-with-llms-rag-and-knowledge-graphs-first-edition/9781835087060">Building AI Agents with LLMs, RAG, and Knowledge Graphs, First Edition</a></li>
-
-  <li><a href="https://www.packtpub.com/en-us/product/building-agentic-ai-systems-first-edition/9781803238753">Building Agentic AI Systems, First Edition</a></li>
- 
-</ul>
 
 </details>
