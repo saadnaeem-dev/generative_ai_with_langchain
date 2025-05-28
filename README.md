@@ -1,6 +1,6 @@
 <h1 align="center">
 Generative AI with LangChain, Second Edition</h1>
-<p align="center">This is the code repository for <a href ="https://www.packtpub.com/en-us/product/generative-ai-with-langchain-second-edition/9781837022014"> Generative AI with LangChain, Second Edition</a>, published by Packt.
+<p align="center">This is the code repository for <a href ="https://www.packtpub.com/en-us/product/generative-ai-with-langchain-second-edition-9781837022014"> Generative AI with LangChain, Second Edition</a>, published by Packt.
 </p>
 
 <h2 align="center">
