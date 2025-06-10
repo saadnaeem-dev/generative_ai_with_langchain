@@ -21,4 +21,7 @@ WORKDIR /home
 COPY . ./.
 
 EXPOSE 8888
+# To support streamlit or other applications, we could add more expose in the Dockerfile, like this:
+# EXPOSE 8501
+
 ENTRYPOINT ["jupyter", "notebook", "--notebook-dir=.", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token=''", "--NotebookApp.password=''"]
