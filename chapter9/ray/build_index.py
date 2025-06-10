@@ -4,6 +4,8 @@ This module provides functionality to build a FAISS vector index from documentat
 websites using Ray for parallel processing. It includes preprocessing, embedding,
 and checkpointing capabilities for efficient index creation.
 
+To force a rebuild: Delete the faiss_index directory.
+
 Example:
     Basic usage:
         $ python build_langchain_index.py
@@ -153,6 +155,17 @@ def build_index(
         with open(chunks_file, 'wb') as f:
             pickle.dump(all_chunks, f)
     
+    # Check if FAISS index already exists
+    index_file = os.path.join(index_dir, "index.faiss")
+    if os.path.exists(index_file):
+        print(f"Loading existing FAISS index from '{index_dir}'...")
+        embeddings = HuggingFaceEmbeddings(model_name=model_name)
+        index = FAISS.load_local(index_dir, embeddings, allow_dangerous_deserialization=True)
+        print(f"Loaded existing index with {index.index.ntotal} vectors")
+        return index
+
+    print("No existing index found, proceeding with embedding...")
+
     # Split into embedding batches
     chunk_batches = []
     for i in range(0, len(all_chunks), embedding_batch_size):
