@@ -25,3 +25,5 @@ ray==2.43.0
 rank_bm25==0.2.2
 langchain_mistralai==0.2.6
 wikipedia==1.4.0
+
+# pip install --user --upgrade --force-reinstall pydantic "langchain-core>=0.3" "langchain-community>=0.3"
